@@ -1,8 +1,10 @@
 const router = require('express').Router()
 const User = require('../models/User')
 const bcrypt = require('bcryptjs')
-const {validateRegistration} = require('../middleware/validation')
+const {validateRegistration, validateLogin} = require('../middleware/validation')
 const passport = require('passport')
+const jwt = require('jsonwebtoken')
+
 
 router.get('/registration/', async(req, res)=>{
     res.send({name: "JohnDoe"})
@@ -43,6 +45,22 @@ router.post('/registration/',  async (req, res)=>{
     }
 })
 
+
+router.post('/login/', async (req, res) =>{
+    // verifying the login details
+    const {error}= await validateLogin.validateAsync(req.body)
+    if(error) return res.status(400).send(error.details[0].message)
+    // verifying if the user exists
+    const user = await User.findOne({username: req.body.username})
+    if(!user) return res.status(400).send("The username doesn't exist")
+
+    const validPassword = bcrypt.compare(req.body.password, user.password)
+    if(!validPassword) return res.status(400).send("Enter a valid password")
+
+    const token = jwt.sign({_id: user._id}, process.env.TOKEN_SECRET)
+    res.header('auth-token', token).send(token)
+    res.send("You are logged in")
+})
 
 // working with google authentication
 
