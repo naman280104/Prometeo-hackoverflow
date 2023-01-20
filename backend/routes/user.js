@@ -1,7 +1,7 @@
 const router = require('express').Router()
 const User = require('../models/User')
 const bcrypt = require('bcryptjs')
-const validateRegistration = require('../middleware/validation')
+const {validateRegistration} = require('../middleware/validation')
 const passport = require('passport')
 
 router.get('/registration/', async(req, res)=>{
@@ -12,6 +12,10 @@ router.get('/registration/', async(req, res)=>{
 // making a new user using the POST api
 
 router.post('/registration/',  async (req, res)=>{
+
+    // validating the user given
+    const result = await validateRegistration.validateAsync(req.body)
+    console.log(result);
 
     // checking for existing usernames and emails
     const checkEmail = await User.findOne({email: req.body.email})
