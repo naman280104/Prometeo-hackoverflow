@@ -1,10 +1,15 @@
-* {
-	margin: 0px;
-	padding: 0px;
+
+
+*{
+  margin: 0px;
+  padding: 0px;
 }
 
 body {
 	background-color: #d9e8f9;
+body{
+  /* background-color: #f8f8fa; */
+
 }
 
 .nav {
@@ -28,6 +33,14 @@ body {
 	margin: 5px;
 	padding: 15px;
 	text-align: center;
+}
+.navbar{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 1;
+  background-color: white !important;
 }
 
 .signinas {
@@ -180,10 +193,11 @@ body {
 	padding: 0px 0px 30px 0px;
 }
 .popup-education{
-  position: absolute;
-  top: -100px;
-  left: 6%;
-  height: 500px;
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 400px;
   width: 620px;
   z-index: 2;
   background-color: white;
@@ -228,7 +242,9 @@ body {
 }
 .Degree input{
   display: inline;
-  width: 400px;
+  padding-right:12px;
+  padding-left: 12px;
+  width: 376px;
   height: 40px;
   border: transparent;
   background-color: rgb(223, 219, 219);
@@ -236,6 +252,7 @@ body {
   text-align: center;
   outline: none;
 }
+
 
 .Degree input:focus{
   border-bottom: 3px solid gray;
@@ -251,7 +268,7 @@ body {
 .popup_edu_save{
   position: absolute;
   right: 40px;
-  top: 385px;
+  bottom: -20px;
   font-size: 20px;
   height: 35px;
   background-color: #440ccc;
@@ -261,11 +278,26 @@ body {
 .popup_edu_cancel{
   position: absolute;
   right: 140px;
-  top: 385px;
+  bottom: -20px;
   font-size: 20px;
   height: 35px;
   background-color:white;
   border: 1px solid grey;
   /* color: white; */
   width: 80px;
+}
+
+.popuplinkfield input{
+  font-size: 18px;
+  text-align: center;
+  height: 30px;
+  margin-right: 15px;
+  margin-left: 15px;
+  background-color: #dfdbdb;
+}
+.linkname{
+  width: 150px;
+}
+.linklink{
+  width: 350px;
 }
