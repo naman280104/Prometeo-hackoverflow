@@ -104,7 +104,7 @@ body{
   position: absolute;
   top: -100px;
   left: 45%;
-  height: 500px;
+  height: 350px;
   width: 620px;
   z-index: 2;
   background-color: white;
@@ -149,7 +149,9 @@ body{
 }
 .Degree input{
   display: inline;
-  width: 400px;
+  padding-right:12px;
+  padding-left: 12px;
+  width: 376px;
   height: 40px;
   border: transparent;
   background-color: rgb(223, 219, 219);
@@ -157,6 +159,7 @@ body{
   text-align: center;
   outline: none;
 }
+
 
 .Degree input:focus{
   border-bottom: 3px solid gray;
@@ -172,7 +175,7 @@ body{
 .popup_edu_save{
   position: absolute;
   right: 40px;
-  top: 385px;
+  bottom: 50px;
   font-size: 20px;
   height: 35px;
   background-color: #440ccc;
@@ -182,7 +185,7 @@ body{
 .popup_edu_cancel{
   position: absolute;
   right: 140px;
-  top: 385px;
+  bottom: 50px;
   font-size: 20px;
   height: 35px;
   background-color:white;
