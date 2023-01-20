@@ -2,6 +2,7 @@ const router = require('express').Router()
 const User = require('../models/User')
 const bcrypt = require('bcryptjs')
 const validateRegistration = require('../middleware/validation')
+const passport = require('passport')
 
 router.get('/registration/', async(req, res)=>{
     res.send({name: "JohnDoe"})
@@ -34,5 +35,16 @@ router.post('/registration/',  async (req, res)=>{
         console.log(error);
     }
 })
+
+router.get('registration/google/failed', (req, res)=>{
+    res.send("authentication failed");
+})
+
+router.get('/registration/google', 
+    passport.authenticate('google', {
+        successRedirect: "",
+        failureRedirect: "registration/google/failed",
+    })
+)
 
 module.exports = router;
