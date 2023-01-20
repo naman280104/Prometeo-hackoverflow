@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import Main from './components/Main'
+import SideNav from './components/SideBar'
 import LandingPage from './pages/LandingPage'
 import LoginPage from './pages/LoginPage'
 import SignUpPage from './pages/SignUpPage'
@@ -9,7 +10,8 @@ function App() {
 
   return (
     <div className="App">
-      <SignUpPage />
+
+      <Main />
     </div>
   )
 }

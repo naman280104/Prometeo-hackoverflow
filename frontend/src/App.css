@@ -57,9 +57,7 @@ body{
 }
 /* for resume page that will be generated */
 .ResumePage {
-	margin-left: 50%;
-	margin-top: 40px;
-	transform: translate(-50%, 0%);
+
 	border: 1px solid rgb(197, 197, 197);
 	width: 21cm;
 	height: 29.7cm;
