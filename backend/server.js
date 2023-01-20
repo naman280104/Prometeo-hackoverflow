@@ -4,6 +4,9 @@ const mongoose = require('mongoose');
 const PORT = process.env.PORT || 8000;
 require('dotenv/config');
 
+// importing the routes
+const authRoute = require('./routes/user')
+app.use('/api/', authRoute);
 
 // connecting with the database
 const uri = process.env.DB_CONNECTION
@@ -17,5 +20,8 @@ const connect = async() =>{
 }
 
 connect();
+
+
+
 
 app.listen(PORT, () => console.log("THE SERVER IS LISTENING"))
