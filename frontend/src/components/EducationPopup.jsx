@@ -18,27 +18,27 @@ export default function EducationPopup(props) {
     <div className='popup-education' id="popupedu">
       <div className="popup-edu">Education <img className='closebtn' onClick={closeit} src={close}  alt="" /></div>
       <form className='formContainer'>
-      <label className='Degree'><div className="popup_edu_field"> College: </div>
+      <label className='Degree'><div className="popup_edu_field"> College/School: </div>
         <input type="text" placeholder='Institute' className='collegeBox'/>
         </label>
         <label className='Degree' ><div className="popup_edu_field"> Degree: </div>
         <input type="text" placeholder= 'Degree' className='DegreeBox'/>
         </label>
-        <label  className='Degree'><div className="popup_edu_field"> Current Sem: </div>
-        <input type="integer" name='Current sem' placeholder= 'Current sem' className='SemBox'/>
+        <label className='Degree'><div className="popup_edu_field"> Score </div>
+        <input type="float" placeholder='Score' className='Score'/>
         </label>
-        <label className='Degree'><div className="popup_edu_field"> Current CGPA: </div>
-        <input type="float" placeholder='CGPA' className='CGPA'/>
+        <label className='Degree'><div className="popup_edu_field"> Address:</div>
+        <input type="text" placeholder='Present Address' className='Address'/>
         </label>
-        <label className='Degree'><div className="popup_edu_field"> City:</div>
-        <input type="text" placeholder='Present City' className='City'/>
+        <label  className='Degree'><div className="popup_edu_field"> Description </div>
+        <input type="integer" name='Current sem' placeholder= 'Description' className='SemBox'/>
         </label>
-        <label className='Degree'><div className="popup_edu_field"> State:</div>
+        {/* <label className='Degree'><div className="popup_edu_field"> State:</div>
         <input type="text" placeholder='present state' className='State'/>
         </label>
         <label className='Degree'><div className="popup_edu_field"> Country:</div>
         <input type="text" placeholder='Present country' className='country'/>
-        </label>
+        </label> */}
         <hr style={{width:"565px"}}/>
         <button className='popup_edu_cancel' onClick={closeit}>Cancel</button>
         <button className='popup_edu_save' onClick={saveit}>Save</button>

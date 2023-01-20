@@ -11,12 +11,12 @@ export default function ResumeEdit() {
 	return (
 		<div className='ResumePage'>
 			<BasicInfo/>
-			<hr/>
 			<Education/>
 			<Links/>
 			<Language/>
 			<Achievements/>
 			<Skills/>
+			<Other/>
 			<Other/>
 		</div>
 	)
