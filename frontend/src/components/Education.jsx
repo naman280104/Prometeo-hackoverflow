@@ -13,13 +13,13 @@ export default function Education(props){
   }
   return (
     <div className='education'>
-        <button className="iphf" onClick={openit}>EDUCATION</button>
+        <center><button className="ipfh" onClick={openit}>EDUCATION</button></center>
         <div>
             <div className="eds">
                 School
             </div>
             <div className="desc">
-                Description
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam, quaerat.
             </div>
         </div>
         <EducationPopup setPopup = {setPopup} popup = {popup}/>
