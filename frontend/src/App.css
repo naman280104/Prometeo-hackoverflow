@@ -8,104 +8,274 @@ body{
   /* background-color: #f8f8fa; */
 
 }
-.nav{
-  width: 100%;
-  background-color: rgb(16, 44, 121);
-  height: 60px;
-  position:fixed;
-  z-index: 2;
-  top: 0px;
-  display: flex;
-  font-size: 18px;
-  color: white;
+
+.nav {
+	width: 100%;
+	background-color: rgb(16, 44, 121);
+	height: 60px;
+	position: fixed;
+	z-index: 2;
+	top: 0px;
+	display: flex;
+	font-size: 18px;
+	color: white;
 }
-.mainpage{
-  /* background-color: aqua; */
-  margin-top: 100px !important;
-  margin-bottom: 40px;
+
+.mainpage {
+	/* background-color: aqua; */
+	margin-top: 100px !important;
+	margin-bottom: 40px;
 }
-.mainpage::-webkit-scrollbar{
-  display: none;
+
+.navbs {
+	margin: 5px;
+	padding: 15px;
+	text-align: center;
 }
-.ResumePage::-webkit-scrollbar{
-  display: none;
+
+.signinas {
+	position: absolute;
+	right: 8%;
+	top: 20px;
 }
-.navbs{
-  margin: 5px;
-  padding: 15px;
-  text-align: center;
+
+.user_name {
+	position: absolute;
+	right: 2%;
+	top: 20px;
 }
-.signinas{
-  position: absolute;
-  right:8%;
-  top: 20px;
-}
-.user_name{
-  position: absolute;
-  right: 2%;
-  top: 20px;
-}
-.template_name{
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translate(-50%,0%);
+
+.template_name {
+	position: absolute;
+	top: 20px;
+	left: 50%;
+	transform: translate(-50%, 0%);
 }
 
 /* for resume page that will be generated */
-.ResumePage{
-  margin-left: 50%;
-  margin-top: 40px;
-  transform: translate(-50%,0%);
-  border: 1px solid rgb(197, 197, 197);
-  width: 21cm;
-  height: 29.7cm;  
-  border-radius: 3px;
-  background-color: rgb(255, 255, 255);
+.ResumePage {
+	margin-left: 50%;
+	margin-top: 40px;
+	transform: translate(-50%, 0%);
+	border: 1px solid rgb(197, 197, 197);
+	width: 21cm;
+	height: 29.7cm;
+	border-radius: 3px;
+	background-color: rgb(255, 255, 255);
 }
-input{
-  border: none;
-  background: none;
+
+.ipfname {
+	width: min-content;
+	font-size: 42px;
+	text-align: center;
+	padding: 10px 0px 0px 40px;
+	border: none;
 }
-input:focus{
+.ipfname:focus{
+	outline: none;
+}
+.ipfph {
+	width: min-content;
+	text-align: right;
+	margin-right: 10px;
+	padding: 0px 0px;
+	margin-bottom: 15px;
+	border: none;
+}
+.ipfph:focus{
+	outline: none;
+}
+.ipfem {
+	width: min-content;
+	text-align: left;
+	margin-left: 10px;
+	padding: 0px 0px;
+	border: none;
+}
+.ipfem:focus{
+	outline: none;
+}
+.education {
+	position: relative;
+	top: 3%;
+	left: 5%;
+	font-size: 25px;
+}
+
+.Links{
+	position: relative;
+	top: 6%;
+	left: 5%;
+	font-size: 25px;
+}
+
+.language{
+	position: relative;
+	top: 9%;
+	left: 5%;
+	font-size: 25px;
+}
+
+.ipfh {
+	text-decoration: none;
+	font-size: 18px;
+	padding-bottom: 10px;
+	padding-right: 25px;
+	text-align: center;
+	transform: translate(-3%,0%);
+	border: none;
+	background: none;
+}
+
+.ipfh::placeholder {
+	color: black;
+}
+
+.eds {
+	margin-top: 0px;
+	padding-top: 5px;
+	font-size: 16px;
+	max-width: 350px;
+}
+
+.desc {
+	margin-bottom: 4px;
+	font-size: 15px;
+	width: 350px;
+}
+
+.plats{
+	font-size: 16px;
+}
+
+.plats a{
+	text-decoration: none;
+	color: black;
+}
+
+.Achievements{
+	position: relative;
+	top: 12%;
+	left: 5%;
+	font-size: 25px;
+}
+
+.Skills{
+	position: relative;
+	top: 15%;
+	left: 5%;
+	font-size: 25px;
+}
+
+.lis{
+	position: relative;
+	left: 2%;
+	font-size: 16px;
+}
+
+.skill{
+	font-size: 16px;
+	display: flex;
+}
+.skill div{
+	padding: 5px 15px;
+	margin: 5px 5px;
+	background-color: rgb(0, 0, 66);
+	border-radius: 12px;
+	color: white;
+}
+.field{
+	position: relative;
+	top: 18%;
+	left: 5%;
+}
+.popup-education{
+  position: absolute;
+  top: -100px;
+  left: 6%;
+  height: 500px;
+  width: 620px;
+  z-index: 2;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 5px;
+} 
+
+.popup-edu{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  /* background-color: rgb(96, 165, 211); */
+  height: 60px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  border-bottom: 1px solid black;
+  /* opacity: 1 !important; */
+}
+
+.formContainer{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 300px;
+  width: 600px;
+  margin-left: 3%;
+  margin-top: 10%;
+  padding: 10px;
+  /* border-bottom: 1px solid black; */
+}
+.Degree{
+  display: flex;  
+  font-size: 20px;
+  display: block-inline;
+  margin: 10px;
+}
+.popup_edu_field{
+  width: 160px;
+  height: 20px;
+}
+.Degree input{
+  display: inline;
+  width: 400px;
+  height: 40px;
+  border: transparent;
+  background-color: rgb(223, 219, 219);
+  border-radius: 5px;
+  text-align: center;
   outline: none;
 }
-.ipfname{
-  width: min-content;
-  font-size: 42px;
-  text-align: center;
-  padding: 10px 0px 0px 40px;
+
+.Degree input:focus{
+  border-bottom: 3px solid gray;
 }
-.ipfph{
-  width: min-content;
-  text-align: right;
-  margin-right: 10px;
-  padding: 0px 0px;
-  margin-bottom: 15px;
-}
-.ipfem{
-  width: min-content;
-  text-align: left;
-  margin-left: 10px;
-  padding: 0px 0px;
-}
-.education{
+
+.closebtn{
   position: absolute;
-  top: 10%;
-  left: 5%;
-  font-size: 25px;
+  background-color: white;
+  right: 0;
+  top: 0;
+  height: 30px;
 }
-.ipfh{
-  font-size: 18px;
-  padding-bottom: 8px;
+.popup_edu_save{
+  position: absolute;
+  right: 40px;
+  top: 385px;
+  font-size: 20px;
+  height: 35px;
+  background-color: #440ccc;
+  color: white;
+  width: 80px;
 }
-.ipfh::placeholder{
-  color: black;
-}
-.eds{
-  font-size: 16px;
-  padding-bottom: 4px;
-}
-.desc{
-  font-size: 15px;
+.popup_edu_cancel{
+  position: absolute;
+  right: 140px;
+  top: 385px;
+  font-size: 20px;
+  height: 35px;
+  background-color:white;
+  border: 1px solid grey;
+  /* color: white; */
+  width: 80px;
 }
