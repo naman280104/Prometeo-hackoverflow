@@ -3,13 +3,13 @@ import React from 'react'
 export default function Education() {
   return (
     <div className='education'>
-        <b><input className='ipfh' type="text" placeholder='EDUCATION'/></b>
+        <button className='ipfh'>EDUCATION</button>
         <div>
             <div className="eds">
-                Degree-1
+               	<b>Degree-1</b>
             </div>
             <div className="desc">
-                Description
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam, quaerat.
             </div>
         </div>
     </div>
