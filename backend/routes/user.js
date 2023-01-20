@@ -8,6 +8,9 @@ router.get('/registration/', async(req, res)=>{
     res.send({name: "JohnDoe"})
 })
 
+
+// making a new user using the POST api
+
 router.post('/registration/',  async (req, res)=>{
 
     // checking for existing usernames and emails
@@ -36,6 +39,9 @@ router.post('/registration/',  async (req, res)=>{
     }
 })
 
+
+// working with google authentication
+
 router.get('registration/google/failed', (req, res)=>{
     res.send("authentication failed");
 })
@@ -44,6 +50,20 @@ router.get('/registration/google',
     passport.authenticate('google', {
         successRedirect: "",
         failureRedirect: "registration/google/failed",
+    })
+)
+
+
+// working with linkedin authentication
+router.get('registration/linkedin/failed', (req, res) => {
+    res.send("authentication failed");
+})
+
+
+router.get('/registration/linkedin', 
+    passport.authenticate('linkedin', {
+        successRedirect: "", 
+        failureRedirect: "",
     })
 )
 
