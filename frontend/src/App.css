@@ -1,41 +1,109 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+*{
+  margin: 0px;
+  padding: 0px;
+}
+body{
+  /* background-color: #f8f8fa; */
+  background-color: #d9e8f9;
+}
+.nav{
+  width: 100%;
+  background-color: rgb(16, 44, 121);
+  height: 60px;
+  position:fixed;
+  z-index: 2;
+  top: 0px;
+  display: flex;
+  font-size: 18px;
+  color: white;
+}
+.mainpage{
+  /* background-color: aqua; */
+  margin-top: 100px !important;
+  margin-bottom: 40px;
+}
+.mainpage::-webkit-scrollbar{
+  display: none;
+}
+.ResumePage::-webkit-scrollbar{
+  display: none;
+}
+.navbs{
+  margin: 5px;
+  padding: 15px;
   text-align: center;
 }
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
+.signinas{
+  position: absolute;
+  right:8%;
+  top: 20px;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.user_name{
+  position: absolute;
+  right: 2%;
+  top: 20px;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.template_name{
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%,0%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* for resume page that will be generated */
+.ResumePage{
+  margin-left: 50%;
+  margin-top: 40px;
+  transform: translate(-50%,0%);
+  border: 1px solid rgb(197, 197, 197);
+  width: 21cm;
+  height: 29.7cm;  
+  border-radius: 3px;
+  background-color: rgb(255, 255, 255);
 }
-
-.card {
-  padding: 2em;
+input{
+  border: none;
+  background: none;
 }
-
-.read-the-docs {
-  color: #888;
+input:focus{
+  outline: none;
+}
+.ipfname{
+  width: min-content;
+  font-size: 42px;
+  text-align: center;
+  padding: 10px 0px 0px 40px;
+}
+.ipfph{
+  width: min-content;
+  text-align: right;
+  margin-right: 10px;
+  padding: 0px 0px;
+  margin-bottom: 15px;
+}
+.ipfem{
+  width: min-content;
+  text-align: left;
+  margin-left: 10px;
+  padding: 0px 0px;
+}
+.education{
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  font-size: 25px;
+}
+.ipfh{
+  font-size: 18px;
+  padding-bottom: 8px;
+}
+.ipfh::placeholder{
+  color: black;
+}
+.eds{
+  font-size: 16px;
+  padding-bottom: 4px;
+}
+.desc{
+  font-size: 15px;
 }
