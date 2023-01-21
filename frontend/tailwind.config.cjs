@@ -6,6 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      Poppins: ["Poppins", "sans-serif"],
+    },
     color: {
       'buttonColor': '#440ccc'
     }
