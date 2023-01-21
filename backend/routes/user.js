@@ -4,6 +4,10 @@ const bcrypt = require('bcryptjs')
 const {validateRegistration, validateLogin} = require('../middleware/validation')
 const passport = require('passport')
 const jwt = require('jsonwebtoken')
+const cors = require('cors')
+const express = require('express')
+const app = express();
+
 
 
 router.get('/registration/', async(req, res)=>{
@@ -14,7 +18,7 @@ router.get('/registration/', async(req, res)=>{
 // making a new user using the POST api
 
 router.post('/registration/',  async (req, res)=>{
-
+    console.log(req.body);
     // validating the user given
     const result = await validateRegistration.validateAsync(req.body)
     console.log(result);
@@ -63,6 +67,16 @@ router.post('/login/', async (req, res) =>{
 })
 
 // working with google authentication
+app.use(passport.initialize());
+app.use(passport.session());
+
+app.use(
+	cors({
+		origin: "http://localhost:3000",
+		methods: "GET,POST,PUT,DELETE",
+		credentials: true,
+	})
+);
 
 router.get('registration/google/failed', (req, res)=>{
     res.send("authentication failed");

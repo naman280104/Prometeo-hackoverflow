@@ -3,6 +3,7 @@ import Gbutton from '../images/Gbutton-2.jpg'
 import Lbutton from '../images/lbutton.png'
 import Signup from '../images/signup.png'
 import { useState } from "react"
+import { useNavigate } from "react-router-dom"
 
 export default function SignUpPage() {
     // the frontend uri
@@ -13,21 +14,36 @@ export default function SignUpPage() {
     const [name, setName] = useState(null);
     const [email, setEmail] = useState(null);
     const [password, setPassword] = useState(null);
+    const navigate = useNavigate()
 
     const handleSubmit = async()=>{
+        const body = {
+            name: name,
+            username: username,
+            email: email,
+            password: password
+        }
+       
         const response = await fetch(  
-            `${uri}/api/user/registration`, {
-                method: POST,
-                body: {
-                    username: username,
-                    name: name,
-                    password: password,
-                    email: email
-                },
+            `${uri}/api/user/registration`,
+            {
+                method: 'POST',
+                body: JSON.stringify(body),
+                headers: {
+                    'Content-Type': 'application/json'
+                  }
             }
-            
-        ).then(console.log("suceesful post"))
+        )
+
+        const jsonResponse = response.json()
+        console.log(jsonResponse);
+        
+        navigate('/home')
+
+        
     }
+
+
 
     function googleLogin() {
         return (
@@ -59,9 +75,12 @@ export default function SignUpPage() {
                         <input onChange={(element) => setPassword(element.target.value)} className="w-full p-2 border border-solid border-gray-300" type="text" placeholder="Full Name" />
                     </div>
 
-                    <button onClick={handleSubmit} className="w-4/12 p-4 my-2 bg-violet-500 text-white">
+                    <button onSubmit={(element)=>
+                        {element.preventDefault
+                        handleSubmit}} className="w-4/12 p-4 my-2 bg-violet-500 text-white">
                         SingUp
                     </button>
+
                     <button>
                         <img src={Gbutton} alt="google-singup" className="w-4/12" onClick={googleLogin} />
                     </button>
