@@ -7,12 +7,12 @@ export default function EducationPopupAdd(props) {
         // console.log(document.getElementById("popupedu"))
         // document.getElementById("popupedu").style.opacity = "1";
     })
-    console.log(props.name)
+    console.log(props.index)
     const closeit=()=>{
         props.setPopup(false)
     }
     const saveit=()=>{
-        const school = document.getElementsByClassName("DegreeBox")[props.index].value;
+        const school = document.getElementsByClassName("collegeBox")[props.index].value;
         const degree = document.getElementsByClassName("DegreeBox")[props.index].value;
         const score  = document.getElementsByClassName("Score")[props.index].value;
         const address = document.getElementsByClassName("Address")[props.index].value;
@@ -30,7 +30,7 @@ export default function EducationPopupAdd(props) {
         console.log("newedudict",newedudict)
         newedu[indexofold]=newedudict;
         console.log(newedu)
-        // props.setEdu(newedu)
+        props.setEdu(newedu)
 
         props.setPopup(false)
     }
