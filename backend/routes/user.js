@@ -71,7 +71,8 @@ router.post('/login/', async (req, res) =>{
     const validPassword = bcrypt.compare(req.body.password, user.password)
     if(!validPassword) return res.status(400).json({status: 'failure', message: 'Enter a valid Password'})
 
-    res.status(200).json({status: 'success', user: user})
+    const token = jwt.sign({_id: user._id}, process.env.TOKEN_SECRET)
+    res.header('auth-token', token).json({status: 'success', token: token});
 })
 
 // working with google authentication
