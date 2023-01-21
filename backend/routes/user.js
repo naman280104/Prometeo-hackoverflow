@@ -18,17 +18,19 @@ router.get('/registration/', async(req, res)=>{
 // making a new user using the POST api
 
 router.post('/registration/',  async (req, res)=>{
-    console.log(req.body);
-    // validating the user given
-    const result = await validateRegistration.validateAsync(req.body)
-    console.log(result);
 
+    // validating the user given
+    try {
+        const result = await validateRegistration.validateAsync(req.body);
+    } catch (err) {
+        res.json({status: 'failure', error: err})
+    }
     // checking for existing usernames and emails
     const checkEmail = await User.findOne({email: req.body.email})
     const checkUsername = await User.findOne({username: req.body.username})
 
-    if(checkEmail) return res.status(400).send("Email already exists")
-    if(checkUsername) return res.status(400).send("Username already exists")
+    if(checkEmail) return res.status(400).json({status: 'failure', message: "The email already exists"})
+    if(checkUsername) return res.status(400).json({status: 'failure', message: "The usernam already exists"})
 
     // hashing the password
     const salt = await bcrypt.genSalt(10)
@@ -43,7 +45,7 @@ router.post('/registration/',  async (req, res)=>{
 
     try {
         const newUser = await user.save()
-        res.send(newUser); 
+        res.json(newUser); 
     } catch (error) {
         console.log(error);
     }
@@ -61,15 +63,15 @@ router.get('/login', async (req, res) => {
 router.post('/login/', async (req, res) =>{
     // verifying the login details
     const {error}= await validateLogin.validateAsync(req.body)
-    if(error) return res.status(400).send(error.details[0].message)
+    if(error) return res.status(400).json({status: 'failure', message: error.details[0].message})
     // verifying if the user exists
     const user = await User.findOne({username: req.body.username})
-    if(!user) return res.status(400).json({message: "failure"})
+    if(!user) return res.status(400).json({status: 'failure', message: "The User Already Exists"})
 
     const validPassword = bcrypt.compare(req.body.password, user.password)
-    if(!validPassword) return res.status(400).send("Enter a valid password")
+    if(!validPassword) return res.status(400).json({status: 'failure', message: 'Enter a valid Password'})
 
-    res.status(200).send(user)
+    res.status(200).json({status: 'success', user: user})
 })
 
 // working with google authentication

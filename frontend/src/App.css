@@ -1,362 +1,361 @@
 
 
 *{
-  margin: 0px;
-  padding: 0px;
-}
-
-.nav {
-	width: 100%;
-	background-color: rgb(16, 44, 121);
-	height: 60px;
+	margin: 0px;
+	padding: 0px;
+  }
+  
+  .nav {
+	  width: 100%;
+	  background-color: rgb(16, 44, 121);
+	  height: 60px;
+	  position: fixed;
+	  z-index: 2;
+	  top: 0px;
+	  display: flex;
+	  font-size: 18px;
+	  color: white;
+  }
+  
+  .mainpage {
+	  margin-top: 100px !important;
+	  margin-bottom: 40px;
+  }
+  
+  .navbs {
+	  margin: 5px;
+	  padding: 15px;
+	  text-align: center;
+  }
+  .navbar{
 	position: fixed;
-	z-index: 2;
-	top: 0px;
-	display: flex;
-	font-size: 18px;
-	color: white;
-}
-
-.mainpage {
-	/* background-color: aqua; */
-	margin-top: 100px !important;
-	margin-bottom: 40px;
-}
-
-.navbs {
-	margin: 5px;
-	padding: 15px;
-	text-align: center;
-}
-.navbar{
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 60px;
-  z-index: 1;
-  /* z-index: 1; */
-  background-color: white !important;
-}
-
-.signinas {
-	position: absolute;
-	right: 8%;
-	top: 20px;
-}
-
-.user_name {
-	position: absolute;
-	right: 2%;
-	top: 20px;
-}
-
-.template_name {
-	position: absolute;
-	top: 20px;
-	left: 50%;
-	transform: translate(-50%, 0%);
-}
-
-/* for resume page that will be generated */
-.ResumePage {
-
-	border: 1px solid rgb(197, 197, 197);
-	width: 21cm;
-	height: 29.7cm;
-	border-radius: 3px;
-	background-color: rgb(255, 255, 255);
-}
-
-.ipfname {
-	width: min-content;
-	font-size: 42px;
-	text-align: center;
-	padding: 10px 0px 0px 40px;
-	border: none;
-}
-.ipfname:focus{
-	outline: none;
-}
-.ipfph {
-	width: min-content;
-	text-align: left;
-	margin-left: 10px;
-	padding: 0px 0px;
-	margin-bottom: 15px;
-	border: none;
-}
-.ipfph:focus{
-	outline: none;
-}
-.ipfem {
-	width: min-content;
-	text-align: right;
-	margin-right: 10px;
-	padding: 0px 0px;
-	border: none;
-}
-.ipfem:focus{
-	outline: none;
-}
-
-.Links{
-	/* position: relative; */
-	top: 6%;
-	/* left: 5%; */
-	font-size: 25px;
-}
-li {
-	font-size: 16px;
-	padding-left: 50px;
-}
-.language{
-	/* position: relative; */
-	top: 9%;
-	/* left: 5%; */
-	font-size: 25px;
-}
-
-.ipfh {
-	text-decoration: none;
-	font-size: 18px;
-	padding-bottom: 10px;
-	padding-right: 25px;
-	text-align: center;
-	transform: translate(-3%,0%);
-	border: none;
-	background: none;
-}
-
-.ipfh::placeholder {
-	color: black;
-}
-
-.eds {
-	margin-left: 50px;
-	padding-top: 5px;
-	font-size: 16px;
-	max-width: 350px;
-}
-
-.dis {
+	top: 0;
+	width: 100%;
+	height: 60px;
+	z-index: 1;
+	background-color: white !important;
+  }
+  
+  .signinas {
+	  position: absolute;
+	  right: 8%;
+	  top: 20px;
+  }
+  
+  .user_name {
+	  position: absolute;
+	  right: 2%;
+	  top: 20px;
+  }
+  
+  .template_name {
+	  position: absolute;
+	  top: 20px;
+	  left: 50%;
+	  transform: translate(-50%, 0%);
+  }
+  
+  /* for resume page that will be generated */
+  .ResumePage {
+  
+	  border: 1px solid rgb(197, 197, 197);
+	  width: 21cm;
+	  height: 29.7cm;
+	  border-radius: 3px;
+	  background-color: rgb(255, 255, 255);
+  }
+  
+  .ipfname {
+	  width: min-content;
+	  font-size: 42px;
+	  text-align: center;
+	  padding: 10px 0px 0px 20px;
+	  border: none;
+  }
+  .ipfname:focus{
+	  outline: none;
+  }
+  .ipfph {
+	  width: min-content;
+	  text-align: left;
+	  margin-left: 10px;
+	  padding: 0px 0px;
+	  margin-bottom: 15px;
+	  border: none;
+  }
+  .ipfph:focus{
+	  outline: none;
+  }
+  .ipfem {
+	  width: min-content;
+	  text-align: right;
+	  margin-right: 10px;
+	  padding: 0px 0px;
+	  border: none;
+  }
+  .ipfem:focus{
+	  outline: none;
+  }
+  
+  .Links{
+	  /* position: relative; */
+	  top: 6%;
+	  /* left: 5%; */
+	  font-size: 25px;
+  }
+  li {
+	  font-size: 16px;
+	  padding-left: 50px;
+  }
+  .language{
+	  /* position: relative; */
+	  top: 9%;
+	  /* left: 5%; */
+	  font-size: 25px;
+  }
+  
+  .ipfh {
+	  text-decoration: none;
+	  font-size: 18px;
+	  padding-bottom: 10px;
+	  padding-right: 25px;
+	  text-align: center;
+	  transform: translate(-3%,0%);
+	  border: none;
+	  background: none;
+  }
+  
+  .ipfh::placeholder {
+	  color: black;
+  }
+  
+  .eds {
+	  margin-left: 50px;
+	  padding-top: 5px;
+	  font-size: 16px;
+	  max-width: 350px;
+  }
+  
+  .dis {
+	  font-size: 13px;
+	  margin-left: 50px;
+	  width: 350px;
+  
+  }
+  .degree{
 	font-size: 13px;
-	margin-left: 50px;
-	width: 350px;
-
-}
-.degree{
-  font-size: 13px;
-}
-.schooladdress{
-  font-size: 13px;
-}
-
-.plats{
-	font-size: 16px;
-}
-
-.plats a{
-	text-decoration: none;
-	color: black;
-}
-
-.Achievements{
-	top: 12%;
-	/* left: 5%; */
-	font-size: 25px;
-}
-
-.Skills{
-	top: 15%;
-	/* left: 5%; */
-	font-size: 25px;
-	padding: 0px 0px 40px 0px;
-}
-
-.lis{
-	margin-left: 50px;
-	font-size: 16px;
-}
-
-.skill{
-	font-size: 16px;
-	margin-left: 50px;
-	padding-right: 5%;
-}
-.skill-item{
-	width: max-content;
-	padding: 5px 15px;
-	margin: 5px 5px;
-	background-color: rgb(0, 0, 66);
-	border-radius: 12px;
-	color: white;
-	display: inline-block;
-}
-.skill-item .close{
-	/* visibility: hidden; */
-	height: 20px;
-	width: 20px;
-	background-color: #440ccc;
-	display: inline-flex;
-	color: white;
-	border-radius: 50%;
+  }
+  .schooladdress{
+	font-size: 13px;
+  }
+  
+  .plats{
+	  font-size: 16px;
+	  margin-left: 50px;
+  }
+  
+  .plats a{
+	  text-decoration: none;
+	  color: black;
+  }
+  
+  .Achievements{
+	  top: 12%;
+	  /* left: 5%; */
+	  font-size: 25px;
+  }
+  
+  .Skills{
+	  top: 15%;
+	  /* left: 5%; */
+	  font-size: 25px;
+	  padding: 0px 0px 40px 0px;
+  }
+  
+  .lis{
+	  margin-left: 50px;
+	  font-size: 16px;
+  }
+  
+  .skill{
+	  font-size: 16px;
+	  margin-left: 50px;
+	  padding-right: 5%;
+  }
+  .skill-item{
+	  width: max-content;
+	  padding: 5px 15px;
+	  margin: 5px 5px;
+	  background-color: rgb(0, 0, 66);
+	  border-radius: 12px;
+	  color: white;
+	  display: inline-block;
+  }
+  .skill-item .close{
+	  /* visibility: hidden; */
+	  height: 20px;
+	  width: 20px;
+	  background-color: #440ccc;
+	  display: inline-flex;
+	  color: white;
+	  border-radius: 50%;
+	  align-items: center;
+	  margin-left: 10px;
+	  justify-content: center;
+	  cursor: pointer;
+  }
+  .tag-input{
+	  padding-left: 5px;
+  }
+  .tag-input:focus{
+	  outline: none;
+  }
+  .field{
+	  position: relativ
+	e;
+	  top: 18%;
+	  /* left: 5%; */
+  }
+  .popup-education{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 400px;
+	width: 620px;
+	z-index: 2;
+	background-color: white;
+	border: 2px solid black;
+	border-radius: 5px;
+  } 
+  
+  .popup-edu{
+	display: flex;
 	align-items: center;
-	margin-left: 10px;
 	justify-content: center;
-	cursor: pointer;
-}
-.tag-input{
-	padding-left: 5px;
-}
-.tag-input:focus{
+	position: absolute;
+	width: 100%;
+	/* background-color: rgb(96, 165, 211); */
+	height: 60px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	border-bottom: 1px solid black;
+	/* opacity: 1 !important; */
+  }
+  
+  .formContainer{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 300px;
+	width: 600px;
+	margin-left: 3%;
+	margin-top: 10%;
+	padding: 10px;
+	/* border-bottom: 1px solid black; */
+  }
+  .Degree{
+	display: flex;  
+	font-size: 20px;
+	display: block-inline;
+	margin: 10px;
+  }
+  .popup_edu_field{
+	width: 160px;
+	height: 20px;
+  }
+  .Degree input{
+	display: inline;
+	padding-right:12px;
+	padding-left: 12px;
+	width: 376px;
+	/* height: 40px; */
+	border: transparent;
+	background-color: rgb(223, 219, 219);
+	border-radius: 5px;
+	/* text-align: center; */
 	outline: none;
-}
-.field{
-	position: relativ
-  e;
-	top: 18%;
-	/* left: 5%; */
-}
-.popup-education{
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 400px;
-  width: 620px;
-  z-index: 2;
-  background-color: white;
-  border: 2px solid black;
-  border-radius: 5px;
-} 
-
-.popup-edu{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  width: 100%;
-  /* background-color: rgb(96, 165, 211); */
-  height: 60px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  border-bottom: 1px solid black;
-  /* opacity: 1 !important; */
-}
-
-.formContainer{
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  height: 300px;
-  width: 600px;
-  margin-left: 3%;
-  margin-top: 10%;
-  padding: 10px;
-  /* border-bottom: 1px solid black; */
-}
-.Degree{
-  display: flex;  
-  font-size: 20px;
-  display: block-inline;
-  margin: 10px;
-}
-.popup_edu_field{
-  width: 160px;
-  height: 20px;
-}
-.Degree input{
-  display: inline;
-  padding-right:12px;
-  padding-left: 12px;
-  width: 376px;
-  /* height: 40px; */
-  border: transparent;
-  background-color: rgb(223, 219, 219);
-  border-radius: 5px;
-  /* text-align: center; */
-  outline: none;
-}
-
-
-.Degree input:focus{
-  border-bottom: 3px solid gray;
-}
-
-.closebtn{
-  position: absolute;
-  background-color: white;
-  right: 0;
-  top: 0;
-  height: 30px;
-}
-.popup_edu_save{
-  position: absolute;
-  right: 40px;
-  bottom: -20px;
-  font-size: 20px;
-  height: 35px;
-  background-color: #440ccc;
-  color: white;
-  width: 80px;
-}
-.popup_edu_cancel{
-  position: absolute;
-  right: 140px;
-  bottom: -20px;
-  font-size: 20px;
-  height: 35px;
-  background-color:white;
-  border: 1px solid grey;
-  /* color: white; */
-  width: 80px;
-}
-
-.popuplinkfield input{
-  font-size: 18px;
-  text-align: center;
-  height: 30px;
-  margin-right: 15px;
-  margin-left: 15px;
-  background-color: #dfdbdb;
-}
-.linkname{
-  width: 150px;
-}
-.linklink{
-  width: 350px;
-}
-.languageNumber{
+  }
+  
+  
+  .Degree input:focus{
+	border-bottom: 3px solid gray;
+  }
+  
+  .closebtn{
+	position: absolute;
+	background-color: white;
+	right: 0;
+	top: 0;
+	height: 30px;
+  }
+  .popup_edu_save{
+	position: absolute;
+	right: 40px;
+	bottom: -20px;
+	font-size: 20px;
+	height: 35px;
+	background-color: #440ccc;
+	color: white;
+	width: 80px;
+  }
+  .popup_edu_cancel{
+	position: absolute;
+	right: 140px;
+	bottom: -20px;
+	font-size: 20px;
+	height: 35px;
+	background-color:white;
+	border: 1px solid grey;
+	/* color: white; */
+	width: 80px;
+  }
+  
+  .popuplinkfield input{
+	font-size: 18px;
+	text-align: center;
+	height: 30px;
+	margin-right: 15px;
+	margin-left: 15px;
+	background-color: #dfdbdb;
+  }
+  .linkname{
 	width: 150px;
-}
-.languageName{
+  }
+  .linklink{
 	width: 350px;
-}
-
-.achievementNumber{
-	width: 150px;
-}
-
-.achieve{
-	width: 350px;
-}
-
-.OtherDescription{
-	height: 100px;
-}
-
-.popup_other_field{
-	width: 160px;
-  	/* height: 40px; */
-}
-
-.popup_other_field input{
-	width: 160px;
-  	height: 80px;
-}
-
-.achievement{
-  width: 560px;
-  height: 250px;
-  background-color: #dfdbdb;
-}
+  }
+  .languageNumber{
+	  width: 150px;
+  }
+  .languageName{
+	  width: 350px;
+  }
+  
+  .achievementNumber{
+	  width: 150px;
+  }
+  
+  .achieve{
+	  width: 350px;
+  }
+  
+  .OtherDescription{
+	  height: 100px;
+  }
+  
+  .popup_other_field{
+	  width: 160px;
+		/* height: 40px; */
+  }
+  
+  .popup_other_field input{
+	  width: 160px;
+		height: 80px;
+  }
+  
+  .achievement{
+	width: 560px;
+	height: 250px;
+	background-color: #dfdbdb;
+  }

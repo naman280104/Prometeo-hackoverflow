@@ -12,7 +12,7 @@ router.get("/google", passport.authenticate("google", ["profile"]));
 router.get(
 	"/google/callback",
 	passport.authenticate("google", {
-		successRedirect:' http://127.0.0.1:5173/',
+		successRedirect:' http://127.0.0.1:5173/home',
 		failureRedirect: "/login/failed",
         callbackURL: "/",
 	})
