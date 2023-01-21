@@ -4,8 +4,8 @@ Develop a Resume Builder web application that allows users to create and edit pr
 
 ## Project Setup
 In case you want to run the projects locally, refer to the respective Repositories 
-- [Frontend](https://github.com/kunal-iitj/Inter-IIT-Project/blob/main/frontend/README.md)
-- [Backend](https://github.com/kunal-iitj/Inter-IIT-Project/blob/main/backend/README.md)
+- [Frontend](https://github.com/AgrawalDrishti/Prometeo-hackoverflow/blob/main/frontend/README.md)
+- [Backend]()
 
 
 ## Built With
