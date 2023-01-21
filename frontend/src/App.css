@@ -218,7 +218,8 @@
 	outline: none;
 }
 .field{
-	position: relative;
+	position: relativ
+  e;
 	top: 18%;
 	/* left: 5%; */
 }
@@ -358,4 +359,10 @@
 .popup_other_field input{
 	width: 160px;
   	height: 80px;
+}
+
+.achievement{
+  width: 560px;
+  height: 250px;
+  background-color: #dfdbdb;
 }

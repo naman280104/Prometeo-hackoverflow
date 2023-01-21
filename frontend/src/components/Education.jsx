@@ -22,7 +22,6 @@ export default function Education(props){
     console.log("in delete 1",newedu,"Edu is",edu)
     setEdu(newedu)
     console.log(edu)
-
   }
   const openeditit=()=>{
     setPopupEdit(true)
