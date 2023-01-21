@@ -8,7 +8,7 @@ export default function NavBar() {
       </section>
       <ul className='flex flex-row pr-5'>
         <li className='px-2'>Resume Templates</li>
-        <li className='px-2'>Log in</li>
+        <Link to={'/login'}><li className='px-2'>Log in</li></Link>
       </ul>
     </nav>
   )

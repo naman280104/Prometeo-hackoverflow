@@ -63,9 +63,7 @@ body{
 
 /* for resume page that will be generated */
 .ResumePage {
-	margin-left: 50%;
-	margin-top: 40px;
-	transform: translate(-50%, 0%);
+
 	border: 1px solid rgb(197, 197, 197);
 	width: 21cm;
 	height: 29.7cm;
@@ -179,6 +177,10 @@ body{
 	top: 15%;
 	left: 5%;
 	font-size: 25px;
+<<<<<<< HEAD
+=======
+	padding: 0px 0px 40px 0px;
+>>>>>>> eea8b0d3a4a409cb16c4f74820ceefef218451f3
 }
 
 .lis{
@@ -189,14 +191,40 @@ body{
 
 .skill{
 	font-size: 16px;
+<<<<<<< HEAD
 	display: flex;
+=======
+	padding-left: 5%;
+	padding-right: 5%;
+>>>>>>> eea8b0d3a4a409cb16c4f74820ceefef218451f3
 }
-.skill div{
+.skill-item{
+	width: max-content;
 	padding: 5px 15px;
 	margin: 5px 5px;
 	background-color: rgb(0, 0, 66);
 	border-radius: 12px;
 	color: white;
+	display: inline-block;
+}
+.skill-item .close{
+	/* visibility: hidden; */
+	height: 20px;
+	width: 20px;
+	background-color: #440ccc;
+	display: inline-flex;
+	color: white;
+	border-radius: 50%;
+	align-items: center;
+	margin-left: 10px;
+	justify-content: center;
+	cursor: pointer;
+}
+.tag-input{
+	padding-left: 5px;
+}
+.tag-input:focus{
+	outline: none;
 }
 .field{
 	position: relative;

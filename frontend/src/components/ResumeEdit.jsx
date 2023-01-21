@@ -6,23 +6,19 @@ import Language from './Language'
 import Links from './Links'
 import Other from './Other'
 import Skills from './Skills'
+import { useEffect } from 'react'
 
 export default function ResumeEdit() {
-	let a=0;
-  const arrayfields=[<BasicInfo key={a++} />,<Education key={a++} />,<Links key={a++} />,<Language key={a++} />,<Achievements key={a++} />,<Skills key={a++} />,<Other key={a++}/>,]
+	const Comps = [<Education />,<Links />,<Language />,<Achievements />,<Skills />,<Other />];
 	return (
 		<div className='ResumePage'>
-			{arrayfields.map(i=>
-          {return i}
-        )}
-      {/* <BasicInfo/>
-			<Education/>
-			<Links/>
-			<Language/>
-			<Achievements/>
-			<Skills/>
-			<Other/>
-			<Other/> */}
+			<BasicInfo/>
+			{Comps[0]}
+			{Comps[1]}
+			{Comps[3]}
+			{Comps[4]}
+			{Comps[5]}
+			{Comps[6]}
 		</div>
 	)
 }
