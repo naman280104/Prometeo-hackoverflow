@@ -79,13 +79,7 @@ router.post('/login/', async (req, res) =>{
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.use(
-	cors({
-		origin: "http://localhost:3000",
-		methods: "GET,POST,PUT,DELETE",
-		credentials: true,
-	})
-);
+app.use(cors());
 
 router.get('registration/google/failed', (req, res)=>{
     res.send("authentication failed");
