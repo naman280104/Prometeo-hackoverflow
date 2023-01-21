@@ -6,7 +6,7 @@ require('dotenv/config')
 passport.use(new GoogleStrategy({
     clientID: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
-    scope: ['proflile']
+    callbackURL: 'http://127.0.0.1:5173/home'
 },
 function(accessToken, refressToken, profile, callback)
 {

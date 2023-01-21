@@ -37,9 +37,12 @@ export default function SignUpPage() {
             }
         )
 
-        const jsonResponse = response.json()
-        console.log(jsonResponse);
-        navigate('/home')
+        const jsonResponse = await response.json()
+        if(jsonResponse.status === "failure") {
+            alert(`${jsonResponse.message ?? "Eneter all the details"}`)
+        }else{
+            navigate('/home')
+        }
     }
 
     function googleLogin() {
