@@ -35,7 +35,6 @@ export default function ResumeEdit() {
 			{Comps[0]}
 			{Comps[1]}
 			{Comps[2]}
-			{Comps[2]}
 			{Comps[3]}
 			{Comps[4]}
 		</div>
