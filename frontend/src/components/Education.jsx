@@ -24,7 +24,7 @@ export default function Education(props){
     console.log(edu)
   }
   const openeditit=()=>{
-    setPopupEdit(true)  
+    setPopupEdit(true)
   }
   // console.log(edu)
   
@@ -34,23 +34,24 @@ export default function Education(props){
         <center><button className="ipfh">EDUCATION</button><button  onClick={openaddit}><img src={add} alt="" style={{height:"40px",position:"relative",top:"14px",left:"-20px",backgroundColor:"azure" }}/></button></center>
         {edu.map((i,index)=>
             <div key={index}>
-            <div className="eds">
+            <div className="eds dis">
                 <b>{i.school?i.school:""}</b>
             </div>
-            <div className="schooladdress">
+            <div className="schooladdress dis">
               {i.address?i.address:""}
             </div>
-            <div className="degree">
+            <div className="degree dis">
                 {i.degree?i.degree:""}<br></br>
                 <b>{i.score? `Score :${i.score}`:""} </b>
             </div>
-            <div className="desc">
+            <div className="desc dis">
                 {i.desc?i.desc:""}
             </div>
             {console.log("i is",i)}
             <EducationPopupEdit
             popup={popupedit}
             setPopup={setPopupEdit}
+            k = {index}
             name={i}
             index={edu.indexOf(i)}
             edu={edu}
