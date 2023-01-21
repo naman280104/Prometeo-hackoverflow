@@ -7,7 +7,7 @@ export default function Main() {
   return (
     <div className='mainpage'>
       <NavBar/>
-      <main className='flex flex-row justify-center'>
+      <main className='flex flex-row justify-center '>
         <SideNav />
         <ResumeEdit/>
       </main>
