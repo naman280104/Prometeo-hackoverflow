@@ -1,9 +1,36 @@
 import React from "react"
 import Login from '../images/login.png'
+import { useState } from "react";
 
 
 
 export default function LoginPage(){
+    const uri = 'http://127.0.0.1:8000/api/user/login'
+    const [username, setUsername] = useState(null);
+    const [password, setPassword] = useState(null);
+
+    // making the login function
+    const handleLogin = async()=>{
+        let body = {
+            username: username,
+            password: password
+        }
+
+        body = JSON.stringify(body)
+        const response = await fetch(  
+            `${uri}`,
+            {
+                method: 'POST',
+                body: body,
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            }
+
+        )
+        
+        if(response.status == 200) console.log("this works");;
+    }
     return (
         <main className="w-screen h-screen flex flex-row font-Poppins">
             <section className="w-6/12 bg-violet-500 flex items-center justify-center">
@@ -14,15 +41,17 @@ export default function LoginPage(){
                 <ul className="flex flex-col w-8/12">
                     <h1 className="font-bold text-3xl font-Poppins">Log In</h1>
                     <div className="my-2 ">
-                        <h6>Email</h6>
-                        <input type="password" placeholder="Email" className="py-2 px-2 w-8/12" />
+                        <h6>Username</h6>
+                        <input type="text" placeholder="username" className="py-2 px-2 w-8/12" 
+                        onChange={(event)=> setUsername(event.target.value)}/>
                     </div>
                     <div className="my-2">
                         <h6>Password</h6>
-                        <input type="password" placeholder="Password" className="py-2 px-2 w-8/12" />
+                        <input type="password" placeholder="Password" className="py-2 px-2 w-8/12" 
+                        onChange={(event) => setPassword(event.target.value)}/>
                     </div>
 
-                    <button className="w-ful py-2 mt-3 text-1xl bg-violet-500 text-white font-semibold">Log In</button>
+                    <button type='submit' onClick={handleLogin}className="w-ful py-2 mt-3 text-1xl bg-violet-500 text-white font-semibold">Log In</button>
                     <h6>Don't have an account, Sign up here</h6>
                 </ul>
             </section>
