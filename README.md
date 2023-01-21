@@ -5,7 +5,7 @@ Develop a Resume Builder web application that allows users to create and edit pr
 ## Project Setup
 In case you want to run the projects locally, refer to the respective Repositories 
 - [Frontend](https://github.com/AgrawalDrishti/Prometeo-hackoverflow/blob/main/frontend/README.md)
-- [Backend]()
+- [Backend](https://github.com/AgrawalDrishti/Prometeo-hackoverflow/blob/main/backend/README.md)
 
 
 ## Built With
