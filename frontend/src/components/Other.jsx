@@ -11,10 +11,10 @@ export default function Other(props) {
   return (
     <div className='field'>
         <center><button className="ipfh" onClick={openit}>New Field</button></center>
-        <div className="desc">
+        <div className="dis">
             Lorem ipsum dolor sit.
         </div>
-        <div className="desc">
+        <div className="dis">
             Lorem ipsum dolor sit amet consectetur.
         </div>
         <OtherPopup setPopup = {setPopup} popup = {popup}/>

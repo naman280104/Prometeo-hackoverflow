@@ -13,13 +13,13 @@ export default function Language() {
             <div className="eds">
                 <b>ENGLISH</b>
             </div>
-            <div className="desc">
+            <div className="dis">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
             </div>
             <div className="eds">
                 <b>HINDI</b>
             </div>
-            <div className="desc">
+            <div className="dis">
                 amet consectetur, adipisicing elit.
             </div>
         </div>

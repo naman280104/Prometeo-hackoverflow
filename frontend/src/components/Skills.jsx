@@ -26,7 +26,7 @@ export default function Skills() {
 				{ skills.map((skill, index) => (
 					<div className="skill-item" key={index}>
 						<span className='text'>{skill}</span>
-						<span className='close' onClick={() => removeSkill(index,self)}>&times;</span>
+						<span className='close' onClick={() => removeSkill(index)}>&times;</span>
 					</div>
 				))}
 				<input onKeyDown={handleKeyDown} type="text" className='tag-input' placeholder='Type Some Skills' name="" id="" />

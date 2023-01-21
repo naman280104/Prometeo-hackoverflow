@@ -1,10 +1,11 @@
 import React from 'react'
-import AchievementsMap from './AchievementsMap'
 export default function AchievementsPopup(props) {
     const closeit=()=>{
         props.setPopup(false)
     }
     const saveit=()=>{
+        const newdata = document.getElementById("textachievement").value
+        props.setData(newdata)
         props.setPopup(false)
     }
     const arr=[0,1,2,3,4,5]
@@ -13,12 +14,8 @@ export default function AchievementsPopup(props) {
     <div className='popup-education' id="popupedu">
       <div className="popup-edu">Achievements <img className='closebtn' onClick={closeit} src={close}  alt="" /></div>
       <form className='formContainer'>
-
-      {arr.map(i=>
-          {return <AchievementsMap achievementNumber={"Achievement No."} Achieve={"Achievement"}/>}
-        )}
-        <hr style={{width:"565px"}}/>
-        <button className='popup_edu_cancel' onClick={closeit}>Cancel</button>
+        <textarea name="" id="textachievement" className='achievement'>{props.data?props.data:""}</textarea>
+      <button className='popup_edu_cancel' onClick={closeit}>Cancel</button>
         <button className='popup_edu_save' onClick={saveit}>Save</button>
     </form>
     </div>
