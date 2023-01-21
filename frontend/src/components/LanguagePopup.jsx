@@ -1,5 +1,4 @@
 import React from 'react'
-import LanguageMap from './LanguageMap'
 export default function LanguagePopup(props) {
   const setArr = props.setArr
   const givenarr = props.arr
