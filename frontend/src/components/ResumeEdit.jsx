@@ -6,18 +6,19 @@ import Language from './Language'
 import Links from './Links'
 import Other from './Other'
 import Skills from './Skills'
+import { useEffect } from 'react'
 
 export default function ResumeEdit() {
+	const Comps = [<Education />,<Links />,<Language />,<Achievements />,<Skills />,<Other />];
 	return (
 		<div className='ResumePage'>
 			<BasicInfo/>
-			<Education/>
-			<Links/>
-			<Language/>
-			<Achievements/>
-			<Skills/>
-			<Other/>
-			<Other/>
+			{Comps[0]}
+			{Comps[1]}
+			{Comps[3]}
+			{Comps[4]}
+			{Comps[5]}
+			{Comps[6]}
 		</div>
 	)
 }

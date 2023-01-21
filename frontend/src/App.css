@@ -160,7 +160,7 @@ body{
 
 .Skills{
 	font-size: 25px;
-	padding: 0px 0px 30px 0px;
+	padding: 0px 0px 40px 0px;
 }
 
 .lis{
@@ -172,15 +172,36 @@ body{
 
 .skill{
 	font-size: 16px;
-	display: flex;
 	padding-left: 5%;
+	padding-right: 5%;
 }
-.skill div{
+.skill-item{
+	width: max-content;
 	padding: 5px 15px;
 	margin: 5px 5px;
 	background-color: rgb(0, 0, 66);
 	border-radius: 12px;
 	color: white;
+	display: inline-block;
+}
+.skill-item .close{
+	/* visibility: hidden; */
+	height: 20px;
+	width: 20px;
+	background-color: #440ccc;
+	display: inline-flex;
+	color: white;
+	border-radius: 50%;
+	align-items: center;
+	margin-left: 10px;
+	justify-content: center;
+	cursor: pointer;
+}
+.tag-input{
+	padding-left: 5px;
+}
+.tag-input:focus{
+	outline: none;
 }
 .field{
 	padding-left: 0px;

@@ -1,4 +1,5 @@
 import React from 'react'
+import Education from './Education';
 import NavBar from './NavBar'
 import ResumeEdit from './ResumeEdit'
 
