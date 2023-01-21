@@ -43,7 +43,29 @@ export default function SignUpPage() {
         
     }
 
+    const handleClick= async (event) => {
+        const body = {
+            name: name,
+            username: username,
+            email: email,
+            password: password
+        }
+       
+        const response = await fetch(  
+            `${uri}/api/user/registration`,
+            {
+                method: 'POST',
+                body: JSON.stringify(body),
+                headers: {
+                    'Content-Type': 'application/json'
+                  }
+            }
+        )
 
+        const jsonResponse = response.json()
+        console.log(jsonResponse);
+        navigate('/home')
+    }
 
     function googleLogin() {
         return (
@@ -75,12 +97,14 @@ export default function SignUpPage() {
                         <input onChange={(element) => setPassword(element.target.value)} className="w-full p-2 border border-solid border-gray-300" type="text" placeholder="Full Name" />
                     </div>
 
-                    <button onSubmit={(element)=>
+                    {/* <button onSubmit={(element)=>
                         {element.preventDefault
                         handleSubmit}} className="w-4/12 p-4 my-2 bg-violet-500 text-white">
                         SingUp
+                    </button> */}
+                    <button type="submit" className="w-4/12 p-4 my-2 bg-violet-500 text-white" onClick={handleClick}>
+                        Sign Up
                     </button>
-
                     <button>
                         <img src={Gbutton} alt="google-singup" className="w-4/12" onClick={googleLogin} />
                     </button>
