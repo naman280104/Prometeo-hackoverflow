@@ -1,6 +1,7 @@
 import React from "react"
 import Login from '../images/login.png'
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -8,6 +9,7 @@ export default function LoginPage(){
     const uri = 'http://127.0.0.1:8000/api/user/login'
     const [username, setUsername] = useState(null);
     const [password, setPassword] = useState(null);
+    const navigate = useNavigate()
 
     // making the login function
     const handleLogin = async()=>{
@@ -17,19 +19,25 @@ export default function LoginPage(){
         }
 
         body = JSON.stringify(body)
-        const response = await fetch(  
-            `${uri}`,
+
+        const response = await fetch(
+            uri, 
             {
                 method: 'POST',
                 body: body,
-                headers: {
+                headers:{
                     'Content-Type': 'application/json'
                 }
             }
-
         )
-        
-        if(response.status == 200) console.log("this works");;
+        const data = await response.json()
+        if(data.message = "failure") {
+            alert("Invalid Credentials")
+        }
+        else{
+            navigate('/home')
+        }
+
     }
     return (
         <main className="w-screen h-screen flex flex-row font-Poppins">

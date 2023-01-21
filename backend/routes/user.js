@@ -50,20 +50,26 @@ router.post('/registration/',  async (req, res)=>{
 })
 
 
+app.use(cors())
+
+router.get('/login', async (req, res) => {
+    const user = await User.find()
+    res.json(user);
+})
+
+
 router.post('/login/', async (req, res) =>{
     // verifying the login details
     const {error}= await validateLogin.validateAsync(req.body)
     if(error) return res.status(400).send(error.details[0].message)
     // verifying if the user exists
     const user = await User.findOne({username: req.body.username})
-    if(!user) return res.status(400).send("The username doesn't exist")
+    if(!user) return res.status(400).json({message: "failure"})
 
     const validPassword = bcrypt.compare(req.body.password, user.password)
     if(!validPassword) return res.status(400).send("Enter a valid password")
 
-    const token = jwt.sign({_id: user._id}, process.env.TOKEN_SECRET)
-    res.header('auth-token', token).send(token)
-    res.send("You are logged in")
+    res.status(200).send(user)
 })
 
 // working with google authentication
