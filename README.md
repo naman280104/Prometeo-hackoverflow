@@ -16,7 +16,7 @@ In case you want to run the projects locally, refer to the respective Repositori
 
 ## Collaborators
 |Name|Roll no.|
-|--|--|--|
+|--|--|
 |[Kunal Tiwari](https://github.com/kunal-iitj)| B21CI023 |
 |[Anadi Sharma](https://github.com/Asharma538)|B21CS008|
 |[Naman Goyal](https://github.com/naman280104)|B21CS048|
