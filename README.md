@@ -11,7 +11,7 @@ In case you want to run the projects locally, refer to the respective Repositori
 ## Built With
 
 * [React.js](https://reactjs.org/) - Javascript library used
-* [NodeJS] (https://nodejs.org/en/) - NodeJS used for backend
+* [NodeJS](https://nodejs.org/en/) - NodeJS used for backend
 * [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS) -Used for styling the UI
 
 ## Collaborators
