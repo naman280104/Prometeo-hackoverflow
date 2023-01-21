@@ -1,9 +1,12 @@
+
+
 *{
   margin: 0px;
   padding: 0px;
 }
 body{
-  background-color: #f8f8fa;
+  /* background-color: #f8f8fa; */
+
 }
 
 .nav {
@@ -19,6 +22,7 @@ body{
 }
 
 .mainpage {
+	/* background-color: aqua; */
 	margin-top: 100px !important;
 	margin-bottom: 40px;
 }
@@ -34,6 +38,7 @@ body{
   width: 100%;
   height: 60px;
   z-index: 1;
+  /* z-index: 1; */
   background-color: white !important;
 }
 
@@ -55,11 +60,10 @@ body{
 	left: 50%;
 	transform: translate(-50%, 0%);
 }
+
 /* for resume page that will be generated */
 .ResumePage {
-	margin-left: 50%;
-	margin-top: 40px;
-	transform: translate(-50%, 0%);
+
 	border: 1px solid rgb(197, 197, 197);
 	width: 21cm;
 	height: 29.7cm;
@@ -71,7 +75,7 @@ body{
 	width: min-content;
 	font-size: 42px;
 	text-align: center;
-	padding: 10px 0px 0px 0px;
+	padding: 10px 0px 0px 40px;
 	border: none;
 }
 .ipfname:focus{
@@ -79,8 +83,8 @@ body{
 }
 .ipfph {
 	width: min-content;
-	text-align: left;
-	margin-left: 10px;
+	text-align: right;
+	margin-right: 10px;
 	padding: 0px 0px;
 	margin-bottom: 15px;
 	border: none;
@@ -90,8 +94,8 @@ body{
 }
 .ipfem {
 	width: min-content;
-	text-align: right;
-	margin-right: 10px;
+	text-align: left;
+	margin-left: 10px;
 	padding: 0px 0px;
 	border: none;
 }
@@ -99,16 +103,23 @@ body{
 	outline: none;
 }
 .education {
+	position: relative;
+	top: 3%;
+	left: 5%;
 	font-size: 25px;
-	padding: 0px 0px 30px 0px;
 }
 
 .Links{
+	position: relative;
+	top: 6%;
+	left: 5%;
 	font-size: 25px;
-	padding: 0px 0px 30px 0px;
 }
 
 .language{
+	position: relative;
+	top: 9%;
+	left: 5%;
 	font-size: 25px;
 }
 
@@ -131,21 +142,22 @@ body{
 	margin-top: 0px;
 	padding-top: 5px;
 	font-size: 16px;
-	padding-left: 5%;
-	padding-right: 5%;
+	max-width: 350px;
 }
 
 .desc {
-	margin-bottom: 4px;
-	font-size: 15px;
-	padding-left: 5%;
-	padding-right: 5%;
+	font-size: 13px;
+	width: 350px;
+}
+.degree{
+  font-size: 13px;
+}
+.schooladdress{
+  font-size: 13px;
 }
 
 .plats{
 	font-size: 16px;
-	padding-left: 5%;
-	padding-right: 5%;
 }
 
 .plats a{
@@ -154,41 +166,67 @@ body{
 }
 
 .Achievements{
+	position: relative;
+	top: 12%;
+	left: 5%;
 	font-size: 25px;
-	padding: 0px 0px 30px 0px;
 }
 
 .Skills{
+	position: relative;
+	top: 15%;
+	left: 5%;
 	font-size: 25px;
-	padding: 0px 0px 30px 0px;
+	padding: 0px 0px 40px 0px;
 }
 
 .lis{
 	position: relative;
-	left: 8%;
+	left: 2%;
 	font-size: 16px;
-	padding-right: 5%;
 }
 
 .skill{
 	font-size: 16px;
-	display: flex;
 	padding-left: 5%;
+	padding-right: 5%;
 }
-.skill div{
+.skill-item{
+	width: max-content;
 	padding: 5px 15px;
 	margin: 5px 5px;
 	background-color: rgb(0, 0, 66);
 	border-radius: 12px;
 	color: white;
+	display: inline-block;
+}
+.skill-item .close{
+	/* visibility: hidden; */
+	height: 20px;
+	width: 20px;
+	background-color: #440ccc;
+	display: inline-flex;
+	color: white;
+	border-radius: 50%;
+	align-items: center;
+	margin-left: 10px;
+	justify-content: center;
+	cursor: pointer;
+}
+.tag-input{
+	padding-left: 5px;
+}
+.tag-input:focus{
+	outline: none;
 }
 .field{
-	padding-left: 0px;
-	padding: 0px 0px 30px 0px;
+	position: relative;
+	top: 18%;
+	left: 5%;
 }
 .popup-education{
   position: fixed;
-  top: 20%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   height: 400px;
