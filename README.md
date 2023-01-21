@@ -19,5 +19,6 @@ In case you want to run the projects locally, refer to the respective Repositori
 |--|--|
 |[Kunal Tiwari](https://github.com/kunal-iitj)| B21CI023 |
 |[Anadi Sharma](https://github.com/Asharma538)|B21CS008|
+|[Aakash Maheshwari](https://github.com/AM-78)|B21CS002|
 |[Naman Goyal](https://github.com/naman280104)|B21CS048|
 |[Drishti Agrawal](https://github.com/AgrawalDrishti)|B21CS027|
