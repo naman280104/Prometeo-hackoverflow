@@ -1,5 +1,6 @@
 import React from 'react'
 import logo from '../images/logoresume.png'
+import {Link} from "react-router-dom"
 export default function NavBar() {
   return (
     <nav className='flex bg-white shadow-sm flex-row justify-between items-center navbar'>
