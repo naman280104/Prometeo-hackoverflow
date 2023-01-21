@@ -2,17 +2,34 @@ import React from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import close from '../images/close_icon.png'
-export default function EducationPopup(props) {
-    useEffect(()=>{
-        // console.log(document.getElementById("popupedu"))
-        // document.getElementById("popupedu").style.opacity = "1";
-    })
-    
+export default function EducationPopupAdd(props) {
+ 
+  
     const closeit=()=>{
         props.setPopup(false)
     }
     const saveit=()=>{
-        props.setPopup(false)
+      
+      const school = document.getElementsByClassName("collegeBox")[props.key1].value;
+      const degree = document.getElementsByClassName("DegreeBox")[props.key1].value;
+      const score  = document.getElementsByClassName("Score")[props.key1].value;
+      const Address = document.getElementsByClassName("Address")[props.key1].value;
+      const Description = document.getElementsByClassName("Description")[props.key1].value;
+      // console.log(Address)
+      // props.setSchool(school)
+      // props.setDesc(Description)
+      // props.setDegree(degree)
+      // props.setScore(score)
+      // props.setAddress(Address)
+      
+      const newedu=props.edu
+      console.log(newedu)
+      newedu.push({school:school,degree:degree,score:score,address:Address,desc:Description})
+      console.log("after",newedu)
+      props.setEdu(newedu)
+      console.log(props.edu)
+
+      props.setPopup(false)
     }
     return props.popup?(
     <div className='popup-education' id="popupedu">
@@ -31,7 +48,7 @@ export default function EducationPopup(props) {
         <input type="text" placeholder='Present Address' className='Address'/>
         </label>
         <label  className='Degree'><div className="popup_edu_field"> Description </div>
-        <input type="integer" name='Current sem' placeholder= 'Description' className='SemBox'/>
+        <input type="integer" name='Current sem' placeholder= 'Description' className='Description'/>
         </label>
         {/* <label className='Degree'><div className="popup_edu_field"> State:</div>
         <input type="text" placeholder='present state' className='State'/>
