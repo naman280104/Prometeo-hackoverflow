@@ -148,9 +148,14 @@ body{
 }
 
 .desc {
-	margin-bottom: 4px;
-	font-size: 15px;
+	font-size: 13px;
 	width: 350px;
+}
+.degree{
+  font-size: 13px;
+}
+.schooladdress{
+  font-size: 13px;
 }
 
 .plats{
