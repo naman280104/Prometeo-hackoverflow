@@ -98,22 +98,19 @@
 .ipfem:focus{
 	outline: none;
 }
-.education {
-	position: relative;
-	top: 3%;
-	/* left: 5%; */
-	font-size: 25px;
-}
 
 .Links{
-	position: relative;
+	/* position: relative; */
 	top: 6%;
 	/* left: 5%; */
 	font-size: 25px;
 }
-
+li {
+	font-size: 16px;
+	padding-left: 50px;
+}
 .language{
-	position: relative;
+	/* position: relative; */
 	top: 9%;
 	/* left: 5%; */
 	font-size: 25px;
@@ -164,14 +161,12 @@
 }
 
 .Achievements{
-	position: relative;
 	top: 12%;
 	/* left: 5%; */
 	font-size: 25px;
 }
 
 .Skills{
-	position: relative;
 	top: 15%;
 	/* left: 5%; */
 	font-size: 25px;
@@ -179,7 +174,6 @@
 }
 
 .lis{
-	position: relative;
 	margin-left: 50px;
 	font-size: 16px;
 }
