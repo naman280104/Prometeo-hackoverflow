@@ -24,6 +24,7 @@ app.use('/auth', gauthRoute)
 const uri = process.env.DB_CONNECTION
 const connect = async() =>{
     try {
+        mongoose.set("strictQuery", false)
         mongoose.connect(uri)
         console.log("DB connected")
     } catch (err) {
