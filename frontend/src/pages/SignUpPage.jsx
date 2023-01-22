@@ -4,6 +4,8 @@ import Lbutton from '../images/lbutton.png'
 import Signup from '../images/signup.png'
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
+import {auth, provider} from '../utils/firebase'
+import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
 export default function SignUpPage() {
     // the frontend uri
@@ -14,6 +16,7 @@ export default function SignUpPage() {
     const [name, setName] = useState(null);
     const [email, setEmail] = useState(null);
     const [password, setPassword] = useState(null);
+    const [state, setState] = useState(null);
     const navigate = useNavigate()
 
 
@@ -45,12 +48,9 @@ export default function SignUpPage() {
         }
     }
 
-    function googleLogin() {
+    const googleLogin = ()=> {
         return (
-            window.open(
-                `${uri}/auth/google/callback`,
-                "_self"
-            )
+            signInWithPopup(auth, provider)
         );
     }
     return (
@@ -77,12 +77,15 @@ export default function SignUpPage() {
                     <button type="submit" className="p-4 my-2 bg-violet-500 text-white" onClick={handleClick}>
                         Sign Up
                     </button>
-                    <button>
-                        <img src={Gbutton} alt="google-singup" className="w-4/12 align-center" onClick={googleLogin} />
-                    </button>
-                    <button>
-                        <img src={Lbutton} alt="google-singup" className="w-4/12" onClick={googleLogin} />
-                    </button>
+                    <div className="w-full flex flex-row basis-1/2">
+                        <button>
+                            <img src={Gbutton} alt="google-singup" className=" align-center" onClick={googleLogin} />
+                        </button>
+                        <button>
+                            <img src={Lbutton} alt="google-singup" className="" onClick={googleLogin} />
+                        </button>
+                    </div>
+
                 </ul>
             </section>
             <section className="w-6/12 bg-violet-500 flex justify-center items-center">

@@ -61,6 +61,7 @@ router.get('/login', async (req, res) => {
 
 
 router.post('/login/', async (req, res) =>{
+
     // verifying the login details
     const {error}= await validateLogin.validateAsync(req.body)
     if(error) return res.status(400).json({status: 'failure', message: error.details[0].message})
@@ -68,23 +69,18 @@ router.post('/login/', async (req, res) =>{
     const user = await User.findOne({username: req.body.username})
     if(!user) return res.status(400).json({status: 'failure', message: "The User Already Exists"})
 
-    const validPassword = bcrypt.compare(req.body.password, user.password)
+    const validPassword = await bcrypt.compare(req.body.password, user.password)
     if(!validPassword) return res.status(400).json({status: 'failure', message: 'Enter a valid Password'})
 
-    res.status(200).json({status: 'success', user: user})
+    const token = jwt.sign({_id: user._id}, process.env.TOKEN_SECRET)
+    res.header('auth-token', token).json({status: 'success', token: token});
 })
 
 // working with google authentication
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.use(
-	cors({
-		origin: "http://localhost:3000",
-		methods: "GET,POST,PUT,DELETE",
-		credentials: true,
-	})
-);
+app.use(cors());
 
 router.get('registration/google/failed', (req, res)=>{
     res.send("authentication failed");

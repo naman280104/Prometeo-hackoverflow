@@ -9,11 +9,11 @@ import logo from '../images/resumelogo.png'
 
 
 
-
 export default function LoginPage(){
     const uri = 'http://127.0.0.1:8000/api/user/login'
     const [username, setUsername] = useState(null);
     const [password, setPassword] = useState(null);
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
     const navigate = useNavigate()
 
     // making the login function
@@ -36,11 +36,15 @@ export default function LoginPage(){
             }
         )
         const data = await response.json()
-        if(data.message = "failure") {
-            alert("Invalid Credentials")
+        console.log(data);
+        console.log(data.status)
+        if(data.status = "success") {
+            localStorage.setItem('token', data.token)
+            navigate('/home')
         }
         else{
-            navigate('/home')
+            alert("Invalid Credentials"
+            )
         }
 
     }
