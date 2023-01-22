@@ -19,6 +19,7 @@ function App() {
           <Route exact path='/login' element={< LoginPage />}></Route>  
           <Route exact path='/signup' element={< SignUpPage />}></Route>  
           <Route exact path='/home' element={localStorage.getItem('token')!=null?(< Main />): (<Error />)}></Route>
+          <Route exact path='/*' element={<LandingPage/>}/>  
         </Routes>  
       </BrowserRouter>
     </div>
