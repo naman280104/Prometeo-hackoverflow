@@ -31,6 +31,10 @@ export default function ResumeEdit() {
                     <li><img src="" alt="" /></li>
                     <li>Download PDF</li>
                 </button>
+                <button onClick={handlePrint} className="bg-white p-4 my-2 border-solid border border-gray-900 hover:bg-gray-100 text-black cursor-pointer">
+                    <li><img src="" alt="" /></li>
+                    <li>Add Custom Field</li>
+                </button>
             </ul>
         </main>
 		</div>

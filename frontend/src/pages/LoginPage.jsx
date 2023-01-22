@@ -9,7 +9,6 @@ import logo from '../images/resumelogo.png'
 
 
 
-
 export default function LoginPage(){
     const uri = 'http://127.0.0.1:8000/api/user/login'
     const [username, setUsername] = useState(null);
