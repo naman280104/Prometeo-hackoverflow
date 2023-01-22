@@ -4,8 +4,9 @@ import {Link} from "react-router-dom"
 import { useNavigate } from "react-router-dom";
 
 
-const navigate = useNavigate()
+
 export default function NavBar() {
+  const navigate = useNavigate()
   const logout = () => {
     localStorage.clear()
     navigate('/')
